@@ -1,0 +1,86 @@
+{
+    "paracetamol": {
+        "descripcion": "El Paracetamol es un analg\u00e9sico y antipir\u00e9tico com\u00fanmente usado para aliviar el dolor leve a moderado y reducir la fiebre. Es efectivo para dolores de cabeza, musculares y de muelas.",
+        "uso": "Paracetamol es utilizado para aliviar dolores leves y reducir la fiebre. No se recomienda exceder la dosis diaria de 4 gramos, ya que puede causar da\u00f1o hep\u00e1tico."
+    },
+    "mejoral": {
+        "descripcion": "Mejoral es un medicamento que combina aspirina y paracetamol, utilizado principalmente para aliviar dolores como dolores de cabeza, musculares o articulares. Tambi\u00e9n ayuda a reducir la fiebre.",
+        "uso": "Mejoral es eficaz para aliviar dolores leves y moderados, adem\u00e1s de reducir la fiebre. Es una opci\u00f3n com\u00fan para aliviar dolores como los de cabeza y musculares."
+    },
+    "alkaseltzer": {
+        "descripcion": "Alka-Seltzer es un medicamento efervescente utilizado para aliviar la acidez estomacal, indigesti\u00f3n y malestar estomacal. Tambi\u00e9n es eficaz para reducir el dolor causado por estas molestias.",
+        "uso": "Alka-Seltzer se utiliza com\u00fanmente para aliviar problemas digestivos, como la acidez estomacal o la indigesti\u00f3n, proporcionando alivio r\u00e1pido."
+    },
+    "tabcin": {
+        "descripcion": "Tabcin es un medicamento utilizado para aliviar los s\u00edntomas del resfriado, como la congesti\u00f3n nasal, la tos y el malestar general. Contiene un antihistam\u00ednico y descongestionante.",
+        "uso": "Tabcin es eficaz para tratar los resfriados comunes, ayudando a reducir la congesti\u00f3n nasal y otros s\u00edntomas molestos relacionados con resfriados."
+    },
+    "vickvaporub": {
+        "descripcion": "Vick VapoRub es una pomada t\u00f3pica utilizada para aliviar la congesti\u00f3n nasal, la tos y los dolores musculares. Contiene mentol, alcanfor y aceite de eucalipto.",
+        "uso": "Vick VapoRub es muy \u00fatil para aliviar la congesti\u00f3n respiratoria y los dolores musculares. Se aplica directamente sobre el pecho o la garganta."
+    },
+    "intestinomicina": {
+        "descripcion": "Intestinomicina es un medicamento utilizado para tratar infecciones intestinales, como la diarrea infecciosa o bacteriana. Act\u00faa eliminando bacterias da\u00f1inas en el intestino.",
+        "uso": "Intestinomicina es eficaz para el tratamiento de infecciones intestinales y problemas digestivos causados por bacterias, ayudando a restaurar el equilibrio intestinal."
+    },
+    "panadol": {
+        "descripcion": "Panadol es un analg\u00e9sico utilizado para aliviar dolores leves a moderados, como dolores de cabeza, dolor muscular, dolor de muelas, o fiebre.",
+        "uso": "Panadol es eficaz para el alivio r\u00e1pido de dolores comunes y fiebre, al igual que el paracetamol, pero es una de las marcas m\u00e1s reconocidas."
+    },
+    "salandrews": {
+        "descripcion": "Sal Andrews es un medicamento efervescente utilizado para tratar la acidez estomacal y la indigesti\u00f3n, aliviando la sensaci\u00f3n de ardor en el est\u00f3mago.",
+        "uso": "La Sal Andrews ayuda a neutralizar el \u00e1cido estomacal, proporcionando alivio r\u00e1pido para las molestias causadas por la acidez o la indigesti\u00f3n."
+    },
+    "pildorin": {
+        "descripcion": "Pildor\u00edn es un anticonceptivo oral utilizado para prevenir embarazos no deseados. Contiene hormonas que controlan el ciclo menstrual y previenen la ovulaci\u00f3n.",
+        "uso": "Pildor\u00edn es una opci\u00f3n de pastillas anticonceptivas que ayuda a regular el ciclo menstrual y evita la fertilizaci\u00f3n."
+    },
+    "cafiaspirina": {
+        "descripcion": "Cafiaspirina es un medicamento combinado de cafe\u00edna y aspirina, utilizado para aliviar dolores de cabeza, migra\u00f1as y dolores musculares.",
+        "uso": "Cafiaspirina act\u00faa combatiendo el dolor de cabeza y mejorando la circulaci\u00f3n sangu\u00ednea, gracias a la acci\u00f3n conjunta de la cafe\u00edna y la aspirina."
+    },
+    "atamel": {
+        "descripcion": "Atamel es un medicamento que contiene paracetamol, utilizado para aliviar dolores de cabeza, fiebre y dolores musculares.",
+        "uso": "Atamel es similar al Paracetamol, con propiedades analg\u00e9sicas y antipir\u00e9ticas, efectivo para reducir dolores y fiebre."
+    },
+    "dramamine": {
+        "descripcion": "Dramamine, tambi\u00e9n conocido como 'El Drama', es un medicamento utilizado para prevenir y tratar los mareos, n\u00e1useas y v\u00f3mitos causados por el movimiento, como en los viajes en autom\u00f3vil, barco o avi\u00f3n.",
+        "uso": "Dramamine es un antihistam\u00ednico utilizado para combatir los s\u00edntomas del mareo y las n\u00e1useas, especialmente en viajes largos o en situaciones de mareo por movimiento."
+    },
+    "bicarbonato": {
+        "descripcion": "El Bicarbonato, conocido tambi\u00e9n como 'El Bicarbo', es un medicamento utilizado para aliviar la acidez estomacal y la indigesti\u00f3n. Neutraliza el exceso de \u00e1cido en el est\u00f3mago.",
+        "uso": "El Bicarbonato se usa com\u00fanmente para reducir la acidez estomacal y aliviar los s\u00edntomas de la indigesti\u00f3n. Tambi\u00e9n puede ser \u00fatil en algunos problemas de acidez g\u00e1strica."
+    },
+    "dolex": {
+        "descripcion": "Dolex es un analg\u00e9sico utilizado para aliviar dolores de cabeza, dolores musculares y dolores leves a moderados. Contiene paracetamol como principio activo.",
+        "uso": "Dolex es com\u00fanmente usado para tratar dolores de cabeza, musculares y otros dolores menores, ofreciendo alivio r\u00e1pido y efectivo."
+    },
+    "lemisol": {
+        "descripcion": "Lemisol, o 'El Lemi', es un medicamento utilizado como antis\u00e9ptico para tratar heridas y quemaduras leves. Se aplica t\u00f3picamente para prevenir infecciones en la piel.",
+        "uso": "Lemisol es un antis\u00e9ptico eficaz para limpiar y desinfectar heridas, cortaduras y quemaduras menores, ayudando a prevenir infecciones."
+    },
+    "tachipirin": {
+        "descripcion": "Tachipir\u00edn es un medicamento utilizado para tratar la fiebre en ni\u00f1os. Contiene paracetamol, lo que ayuda a reducir la fiebre y aliviar dolores leves a moderados.",
+        "uso": "Tachipir\u00edn es un medicamento especialmente formulado para ni\u00f1os, utilizado para bajar la fiebre y aliviar dolores causados por resfriados o infecciones comunes."
+    },
+    "alkad": {
+        "descripcion": "Alka-D es un medicamento utilizado para aliviar la acidez estomacal y el malestar causado por la indigesti\u00f3n. Act\u00faa neutralizando el exceso de \u00e1cido en el est\u00f3mago.",
+        "uso": "Alka-D se usa para tratar problemas digestivos como la acidez y el malestar estomacal, proporcionando alivio r\u00e1pido y efectivo."
+    },
+    "enteroguanil": {
+        "descripcion": "Enteroguanil, o 'La Guanil', es un medicamento utilizado para tratar la diarrea. Ayuda a reducir la frecuencia y la intensidad de las evacuaciones intestinales.",
+        "uso": "Enteroguanil es eficaz en el tratamiento de la diarrea aguda, especialmente en casos causados por infecciones intestinales, restaurando el equilibrio digestivo."
+    },
+    "dolofin": {
+        "descripcion": "Dolofin, o 'El Dolo', es un medicamento utilizado para aliviar dolores leves a moderados, como dolores musculares y de cabeza. Contiene paracetamol como principio activo.",
+        "uso": "Dolofin es utilizado para aliviar dolores como los de cabeza, musculares y otras molestias menores, proporcionando un alivio r\u00e1pido y efectivo."
+    },
+    "neosaldina": {
+        "descripcion": "Neosaldina, o 'La Neo', es un medicamento utilizado para tratar migra\u00f1as y dolores de cabeza intensos. Contiene principios activos que ayudan a aliviar el dolor y reducir la inflamaci\u00f3n.",
+        "uso": "Neosaldina es muy eficaz para aliviar las migra\u00f1as y dolores de cabeza severos, proporcionando un alivio r\u00e1pido y eficaz."
+    },
+    "amoxil": {
+        "descripcion": "Amoxil, o 'La Amoxilina', es un antibi\u00f3tico utilizado para tratar infecciones bacterianas, como infecciones respiratorias, del tracto urinario y otras infecciones comunes.",
+        "uso": "Amoxil es un medicamento antibi\u00f3tico que combate infecciones bacterianas al interferir con la producci\u00f3n de las paredes celulares de las bacterias, ayudando a eliminarlas."
+    }
+}
