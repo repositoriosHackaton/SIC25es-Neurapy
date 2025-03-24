@@ -1,11 +1,9 @@
 ![397227369-057ac64a-1499-4e0d-966b-eb0b13b44a79](https://github.com/user-attachments/assets/6ac9b822-9183-4980-b021-80cd7c39b429)
 
 # MediBot | Asistente Inteligente de Medicamentos
-Este chatbot permite consultar información sobre medicamentos, efectos secundarios y dosis recomendadas.
-
 
 # 1. Miembros del Equipo
-- FRANKLIN ESTEBAN PEREZ FUENTES 
+- Franklin Esteban Perez Fuentes (LÍder)
 - Bryan Antonio Martinez Torres
 - Jael Esmeralda Flores Fuentes
 
@@ -64,10 +62,35 @@ La problemática que aborda esta idea es que muchas personas no conocen el nombr
    ```sh
    python chatbot.py
    ```
-2. Interactúa con el chatbot escribiendo preguntas relacionadas con medicamentos.
 
-## Entrenamiento del Modelo
-El chatbot utiliza una red neuronal con capas densas para clasificar las intenciones. Para mejorar el desempeño, se pueden ajustar los hiperparámetros como el número de épocas y el tamaño del lote en la función `model.fit()`.
+# 3. ¿Cómo Funciona el Bot?✅
+
+# 1. Preparación de Datos:
+Definición de Medicamentos: Se crea un diccionario (medicamentos) que almacena información detallada sobre cada medicamento (descripción, uso).
+Variantes de Medicamentos: Se crea un diccionario (variantes_medicamentos) que contiene las distintas formas en que los usuarios podrían referirse a cada medicamento (sinónimos, errores de ortografía).
+Intents Mejorados: Se carga un archivo JSON (intents.json) que define las intenciones del usuario (saludos, preguntas sobre medicamentos, etc.) y se mejora, para que pueda tomar las variantes de los medicamentos.
+Procesamiento de Lenguaje: Se define una clase (ProcesadorLenguaje) que utiliza las variantes de medicamentos para extraer la entidad del medicamento del texto del usuario.
+
+# 2. Modelo de Procesamiento del Lenguaje Natural (PLN):
+Generación de Ejemplos de Entrenamiento: Se generan ejemplos de entrenamiento para el modelo de PLN, incluyendo preguntas sobre medicamentos con diferentes variantes.
+Tokenización y Stemming: Se procesa el texto de entrada (tokenización y stemming) para convertirlo en una representación numérica que el modelo pueda entender.
+Creación del Modelo: Se crea un modelo de red neuronal con Keras para clasificar las intenciones del usuario.
+Entrenamiento del Modelo: Se entrena el modelo con los datos de entrenamiento preparados.
+Predicción de Intención: Se define una función (predecir_intencion) que utiliza el modelo entrenado para predecir la intención del usuario a partir de su texto.
+
+# 3. Lógica del Chatbot:
+Función chatbot_response: Esta es la función principal del chatbot. Toma el texto del usuario como entrada y realiza los siguientes pasos:
+Predice la intención del usuario utilizando el modelo de PLN.
+Si la intención es una pregunta sobre un medicamento, extrae la entidad del medicamento utilizando la clase ProcesadorLenguaje.
+Busca la información del medicamento en el diccionario medicamentos y genera una respuesta adecuada.
+Si la intención no es sobre un medicamento, busca una respuesta predefinida en el archivo intents.json.
+Si no se encuentra ninguna respuesta adecuada, devuelve un mensaje de error.
+
+# 4. Interfaz Gráfica (GUI)(En Desarrollo):
+CustomTkinter: Se utiliza la biblioteca CustomTkinter para crear una interfaz gráfica para el chatbot.
+Elementos de la GUI: La GUI incluye un área de chat para mostrar la conversación, un campo de entrada para que el usuario escriba sus preguntas y un botón de envío.
+Función send_message: Esta función se llama cuando el usuario envía un mensaje. Toma el texto del usuario, lo envía a la función chatbot_response para obtener una respuesta y muestra la conversación en el área de chat.
+
 
 ## Contribuciones
 Si deseas mejorar este chatbot, puedes:
