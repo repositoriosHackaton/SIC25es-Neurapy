@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 from tensorflow.keras.optimizers import Adam # type: ignore
-
+import customtkinter as ctk
 
 # ---- FUNCIONES DE UTILIDAD PARA GUARDAR JSON ----
 def guardar_json(datos, filename):
@@ -133,6 +133,7 @@ variantes_medicamentos = {
     "neosaldina": ["neosaldina", "neo", "la neo", "neosaldin"],
     "amoxil": ["amoxil", "amoxilina", "amoxicilina", "la amoxilina"]
 }
+
 # ---- CARGA DE INTENTS ORIGINALES ----
 # Cargar el archivo JSON original
 try:
@@ -394,17 +395,91 @@ def chatbot_response(texto):
     # Respuesta por defecto si no se encuentra la intención
     return "Lo siento, no entiendo tu consulta. ¿Podrías reformularla?"
 
-# ---- FUNCIÓN PRINCIPAL DEL CHATBOT ----
-def iniciar_chatbot():
-    print("¡Hola! Soy MediBot. Escribe 'salir' para terminar.")
-    while True:
-        user_input = input("Tú: ")
-        if user_input.lower() == "salir":
-            print("¡Hasta luego! Espero haber sido de ayuda.")
-            break
-        response = chatbot_response(user_input)
-        print(f"MediBot: {response}")
+# ---- INTERFAZ GRÁFICA CON CUSTOMTKINTER ----
+class MediBotApp:
+    def __init__(self, root):
+        self.root = root
+        self.setup_ui()
+        
+    def setup_ui(self):
+        ctk.set_appearance_mode("light")  # Modo claro
+        ctk.set_default_color_theme("blue")
+        
+        # Configurar fondo blanco para la ventana principal (root)
+        self.root.configure(bg="white")
+        self.root.title("MediBot - Asistente de Medicamentos")
+        self.root.geometry("500x600")
+        self.root.minsize(400, 700)
+        
+        # Fondo blanco para el frame principal
+        self.main_frame = ctk.CTkFrame(self.root, fg_color="white", border_width=0)
+        self.main_frame.pack(pady=20, padx=20, fill="both", expand=True)
+        
+        self.title_label = ctk.CTkLabel(self.main_frame, text="MediBot", 
+                                        font=ctk.CTkFont(size=24, weight="bold"), 
+                                        text_color="#0078D7",
+                                        fg_color="white")
+        self.title_label.pack(pady=(10, 5))
+        
+        self.subtitle_label = ctk.CTkLabel(self.main_frame, text="Tu asistente virtual de medicamentos", 
+                                          font=ctk.CTkFont(size=14), text_color="#333333",
+                                          fg_color="white")
+        self.subtitle_label.pack(pady=(0, 10))
+        
+        # Fondo blanco para el frame del chat sin borde
+        self.chat_frame = ctk.CTkFrame(self.main_frame, fg_color="white", border_width=0)
+        self.chat_frame.pack(padx=10, pady=10, fill="both", expand=True)
+        
+        # Mantener el color específico para el área de chat (preguntas y respuestas)
+        self.chat_window = ctk.CTkTextbox(self.chat_frame, width=450, height=400, wrap="word",
+                                          fg_color="#f0f0f0", text_color="#0078D7")
+        self.chat_window.pack(padx=10, pady=10, fill="both", expand=True)
+        
+        self.chat_window.insert("end", "MediBot: ¡Hola! Soy tu asistente virtual de medicamentos. Pregúntame lo que necesites.\n\n", "bot")
+        self.chat_window.tag_config("bot", foreground="#0078D7")
+        self.chat_window.tag_config("user", foreground="#333333")
+        
+        self.chat_window.configure(state="disabled")  # Solo lectura
+        
+        # Fondo blanco para el frame de entrada sin borde
+        self.input_frame = ctk.CTkFrame(self.main_frame, fg_color="white", border_width=0)
+        self.input_frame.pack(padx=10, pady=(0, 10), fill="x")
+        
+        # Quitar el borde del campo de entrada de preguntas
+        self.entry = ctk.CTkEntry(self.input_frame, width=350, 
+                                 placeholder_text="Escribe tu pregunta aquí...",
+                                 text_color="#333333", fg_color="#f0f0f0",
+                                 border_width=0)  # Quitar el borde
+        self.entry.pack(pady=10, padx=10, side="left", fill="x", expand=True)
+        self.entry.bind("<Return>", lambda event: self.send_message())
+        
+        self.send_button = ctk.CTkButton(self.input_frame, text="Enviar", command=self.send_message,
+                                        fg_color="#0078D7", text_color="#ffffff")
+        self.send_button.pack(pady=10, padx=10, side="right")
+        
+        self.footer_label = ctk.CTkLabel(self.main_frame, text="Powered by NeuraPy - Versión 1.0", 
+                                       font=ctk.CTkFont(size=10), text_color="#707070",
+                                       fg_color="white")
+        self.footer_label.pack(pady=5)
+        
+    def send_message(self):
+        user_input = self.entry.get()
+        if user_input:
+            self.chat_window.configure(state="normal")
+            self.chat_window.insert("end", "Tú: " + user_input + "\n", "user")
+            
+            response = chatbot_response(user_input)
+            
+            self.chat_window.insert("end", "MediBot: " + response + "\n\n", "bot")
+            
+            self.chat_window.see("end")
+            self.chat_window.configure(state="disabled")
+            self.entry.delete(0, "end")
 
-# Iniciar el chatbot si se ejecuta el script directamente
+def main():
+    root = ctk.CTk()
+    app = MediBotApp(root)
+    root.mainloop()
+
 if __name__ == "__main__":
-    iniciar_chatbot()
+    main()

@@ -86,7 +86,7 @@ Busca la información del medicamento en el diccionario medicamentos y genera un
 Si la intención no es sobre un medicamento, busca una respuesta predefinida en el archivo intents.json.
 Si no se encuentra ninguna respuesta adecuada, devuelve un mensaje de error.
 
-# 4. Interfaz Gráfica (GUI)(En Desarrollo):
+# 4. Interfaz Gráfica (GUI):
 CustomTkinter: Se utiliza la biblioteca CustomTkinter para crear una interfaz gráfica para el chatbot.
 Elementos de la GUI: La GUI incluye un área de chat para mostrar la conversación, un campo de entrada para que el usuario escriba sus preguntas y un botón de envío.
 Función send_message: Esta función se llama cuando el usuario envía un mensaje. Toma el texto del usuario, lo envía a la función chatbot_response para obtener una respuesta y muestra la conversación en el área de chat.
@@ -94,7 +94,7 @@ Función send_message: Esta función se llama cuando el usuario envía un mensaj
 
 ## Contribuciones
 Si deseas mejorar este chatbot, puedes:
-- Agregar más medicamentos a la base de conocimientos (`intents.json`).
+- Agregar más medicamentos a la base de conocimientos.
 - Mejorar el preprocesamiento del texto.
 - Optimizar la arquitectura del modelo de redes neuronales.
 
